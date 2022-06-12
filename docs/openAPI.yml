@@ -1,0 +1,13 @@
+openapi: '3.0.1'
+info:
+  title: 'CDK'
+  version: '2022-06-11T15:51:36Z'
+servers:
+  - url: 'https://5zo3fpo0n4.execute-api.ap-south-1.amazonaws.com/{basePath}'
+    variables:
+      basePath:
+        default: '/prod'
+paths:
+  /:
+    get: {}
+components: {}

@@ -1,0 +1,1040 @@
+{
+  "version": "20.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "cdk-stack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://528026266520/ap-south-1",
+      "properties": {
+        "templateFile": "cdk-stack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/cdk-stack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "/home/vatsal/Desktop/cdk-typescript-lambda/playground/asset.da481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbdd",
+              "id": "da481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbdd",
+              "packaging": "zip",
+              "sourceHash": "da481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbdd",
+              "s3BucketParameter": "AssetParametersda481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbddS3Bucket29754E0B",
+              "s3KeyParameter": "AssetParametersda481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbddS3VersionKeyE92B6C66",
+              "artifactHashParameter": "AssetParametersda481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbddArtifactHashD0089649"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/construct-compat.ts:453:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:187:23)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:86:19)",
+              "CdkStarterStack.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack.ts:683:29)",
+              "/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:53",
+              "withoutDeprecationWarnings (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:219:12)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:14)",
+              "new Asset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
+              "AssetCode.bind (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/code.ts:285:20)",
+              "new Function (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:708:29)",
+              "new NodejsFunction (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:103:5)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:25:23)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "/home/vatsal/Desktop/cdk-typescript-lambda/playground/asset.efdb03ad2e80a11e17f8a894a0b6cda3ff78a02df52680a7939fc7f35e3559eb",
+              "id": "efdb03ad2e80a11e17f8a894a0b6cda3ff78a02df52680a7939fc7f35e3559eb",
+              "packaging": "zip",
+              "sourceHash": "efdb03ad2e80a11e17f8a894a0b6cda3ff78a02df52680a7939fc7f35e3559eb",
+              "s3BucketParameter": "AssetParametersefdb03ad2e80a11e17f8a894a0b6cda3ff78a02df52680a7939fc7f35e3559ebS3Bucket78E799D7",
+              "s3KeyParameter": "AssetParametersefdb03ad2e80a11e17f8a894a0b6cda3ff78a02df52680a7939fc7f35e3559ebS3VersionKey1B5454A8",
+              "artifactHashParameter": "AssetParametersefdb03ad2e80a11e17f8a894a0b6cda3ff78a02df52680a7939fc7f35e3559ebArtifactHashB3A88ACC"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/construct-compat.ts:453:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:187:23)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:86:19)",
+              "CdkStarterStack.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack.ts:683:29)",
+              "/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:53",
+              "withoutDeprecationWarnings (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:219:12)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:14)",
+              "NestedStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/nested.ts:33:34)",
+              "new Asset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
+              "AssetCode.bind (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/code.ts:285:20)",
+              "new Function (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:708:29)",
+              "new NodejsFunction (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:103:5)",
+              "new HealthStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/substacks/health/index.ts:16:17)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:35:5)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "cdkstackhealth7D5900AE.nested.template.json",
+              "id": "aab98f915d86f3900714ce52d7069ae83fc185f147b988382f3b951bdaf6e0f8",
+              "packaging": "file",
+              "sourceHash": "aab98f915d86f3900714ce52d7069ae83fc185f147b988382f3b951bdaf6e0f8",
+              "s3BucketParameter": "AssetParametersaab98f915d86f3900714ce52d7069ae83fc185f147b988382f3b951bdaf6e0f8S3Bucket348D70AB",
+              "s3KeyParameter": "AssetParametersaab98f915d86f3900714ce52d7069ae83fc185f147b988382f3b951bdaf6e0f8S3VersionKey3670A10D",
+              "artifactHashParameter": "AssetParametersaab98f915d86f3900714ce52d7069ae83fc185f147b988382f3b951bdaf6e0f8ArtifactHash2140FFD2"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/construct-compat.ts:453:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:187:23)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:86:19)",
+              "CdkStarterStack.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack.ts:683:29)",
+              "/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:53",
+              "withoutDeprecationWarnings (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:219:12)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:14)",
+              "HealthStack._prepareTemplateAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/nested-stack.ts:222:60)",
+              "defineNestedStackAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/prepare-app.ts:69:10)",
+              "Object.prepareApp (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/prepare-app.ts:43:7)",
+              "Object.synthesize (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:24:3)",
+              "App.synth (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stage.ts:180:23)",
+              "process.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/app.ts:131:45)",
+              "Object.onceWrapper (events.js:520:26)",
+              "process.emit (events.js:400:28)",
+              "process.emit (domain.js:470:12)",
+              "process.emit (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/cdk-stack/CDK/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKDE331439",
+            "trace": [
+              "new RestApi (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:741:22)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:18:20)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/CDK/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKCloudWatchRole73B0CD1F",
+            "trace": [
+              "new Role (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-iam/lib/role.ts:381:18)",
+              "RestApi._configureCloudWatchRole (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:523:18)",
+              "new RestApi (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:759:12)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:18:20)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/CDK/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKAccount2F865C0D",
+            "trace": [
+              "RestApi._configureCloudWatchRole (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:528:30)",
+              "new RestApi (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:759:12)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:18:20)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/CDK/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKDeployment4B9C8531f156918e92be4ea9fd390c5865612b1b",
+            "trace": [
+              "new Deployment (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/deployment.ts:75:21)",
+              "RestApi._configureDeployment (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:556:32)",
+              "new RestApi (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:762:10)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:18:20)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/CDK/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKDeploymentStageprod2FC93819",
+            "trace": [
+              "new Stage (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/stage.ts:242:22)",
+              "RestApi._configureDeployment (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:566:30)",
+              "new RestApi (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:762:10)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:18:20)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/CDK/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKEndpoint25D2AB48",
+            "trace": [
+              "RestApi._configureDeployment (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:571:7)",
+              "new RestApi (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:762:10)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:18:20)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/CDK/Default/GET/ApiPermission.cdkstackCDKE9F930B7.GET..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKGETApiPermissioncdkstackCDKE9F930B7GETFBF8D451",
+            "trace": [
+              "NodejsFunction.addPermission (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:356:5)",
+              "LambdaIntegration.bind (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:64:18)",
+              "new Method (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:204:36)",
+              "RootResource.addMethod (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:30:23)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/CDK/Default/GET/ApiPermission.Test.cdkstackCDKE9F930B7.GET..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKGETApiPermissionTestcdkstackCDKE9F930B7GET8C76BBD6",
+            "trace": [
+              "NodejsFunction.addPermission (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:356:5)",
+              "LambdaIntegration.bind (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:72:20)",
+              "new Method (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:204:36)",
+              "RootResource.addMethod (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:30:23)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/CDK/Default/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKGET46C46C59",
+            "trace": [
+              "new Method (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:222:22)",
+              "RootResource.addMethod (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:30:23)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/CDK/Default/test/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKtest4CF5B065",
+            "trace": [
+              "new Resource (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:446:22)",
+              "RootResource.addResource (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:183:12)",
+              "new HealthStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/substacks/health/index.ts:21:27)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:35:5)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/CDK/Default/test/GET/ApiPermission.cdkstackCDKE9F930B7.GET..test": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKtestGETApiPermissioncdkstackCDKE9F930B7GETtestBC310FC1",
+            "trace": [
+              "NodejsFunction.addPermission (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:356:5)",
+              "LambdaIntegration.bind (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:64:18)",
+              "new Method (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:204:36)",
+              "Resource.addMethod (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
+              "new HealthStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/substacks/health/index.ts:22:10)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:35:5)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/CDK/Default/test/GET/ApiPermission.Test.cdkstackCDKE9F930B7.GET..test": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKtestGETApiPermissionTestcdkstackCDKE9F930B7GETtestF889A5A4",
+            "trace": [
+              "NodejsFunction.addPermission (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:356:5)",
+              "LambdaIntegration.bind (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:72:20)",
+              "new Method (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:204:36)",
+              "Resource.addMethod (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
+              "new HealthStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/substacks/health/index.ts:22:10)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:35:5)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/CDK/Default/test/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKtestGETBD229FEE",
+            "trace": [
+              "new Method (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:222:22)",
+              "Resource.addMethod (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
+              "new HealthStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/substacks/health/index.ts:22:10)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:35:5)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/hello/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloServiceRole353607D3",
+            "trace": [
+              "new Role (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-iam/lib/role.ts:381:18)",
+              "new Function (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:688:31)",
+              "new NodejsFunction (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:103:5)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:25:23)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/hello/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hello26396490",
+            "trace": [
+              "new Function (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:771:35)",
+              "new NodejsFunction (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:103:5)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:25:23)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/AssetParameters/da481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbdd/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersda481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbddS3Bucket29754E0B",
+            "trace": [
+              "new FileAssetParameters (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:86:19)",
+              "CdkStarterStack.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack.ts:683:29)",
+              "/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:53",
+              "withoutDeprecationWarnings (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:219:12)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:14)",
+              "new Asset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
+              "AssetCode.bind (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/code.ts:285:20)",
+              "new Function (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:708:29)",
+              "new NodejsFunction (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:103:5)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:25:23)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/AssetParameters/da481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbdd/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersda481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbddS3VersionKeyE92B6C66",
+            "trace": [
+              "new FileAssetParameters (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:86:19)",
+              "CdkStarterStack.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack.ts:683:29)",
+              "/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:53",
+              "withoutDeprecationWarnings (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:219:12)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:14)",
+              "new Asset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
+              "AssetCode.bind (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/code.ts:285:20)",
+              "new Function (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:708:29)",
+              "new NodejsFunction (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:103:5)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:25:23)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/AssetParameters/da481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbdd/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersda481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbddArtifactHashD0089649",
+            "trace": [
+              "new FileAssetParameters (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:86:19)",
+              "CdkStarterStack.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack.ts:683:29)",
+              "/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:53",
+              "withoutDeprecationWarnings (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:219:12)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:14)",
+              "new Asset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
+              "AssetCode.bind (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/code.ts:285:20)",
+              "new Function (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:708:29)",
+              "new NodejsFunction (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:103:5)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:25:23)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/AssetParameters/efdb03ad2e80a11e17f8a894a0b6cda3ff78a02df52680a7939fc7f35e3559eb/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersefdb03ad2e80a11e17f8a894a0b6cda3ff78a02df52680a7939fc7f35e3559ebS3Bucket78E799D7",
+            "trace": [
+              "new FileAssetParameters (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:86:19)",
+              "CdkStarterStack.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack.ts:683:29)",
+              "/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:53",
+              "withoutDeprecationWarnings (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:219:12)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:14)",
+              "NestedStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/nested.ts:33:34)",
+              "new Asset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
+              "AssetCode.bind (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/code.ts:285:20)",
+              "new Function (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:708:29)",
+              "new NodejsFunction (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:103:5)",
+              "new HealthStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/substacks/health/index.ts:16:17)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:35:5)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/AssetParameters/efdb03ad2e80a11e17f8a894a0b6cda3ff78a02df52680a7939fc7f35e3559eb/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersefdb03ad2e80a11e17f8a894a0b6cda3ff78a02df52680a7939fc7f35e3559ebS3VersionKey1B5454A8",
+            "trace": [
+              "new FileAssetParameters (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:86:19)",
+              "CdkStarterStack.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack.ts:683:29)",
+              "/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:53",
+              "withoutDeprecationWarnings (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:219:12)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:14)",
+              "NestedStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/nested.ts:33:34)",
+              "new Asset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
+              "AssetCode.bind (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/code.ts:285:20)",
+              "new Function (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:708:29)",
+              "new NodejsFunction (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:103:5)",
+              "new HealthStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/substacks/health/index.ts:16:17)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:35:5)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/AssetParameters/efdb03ad2e80a11e17f8a894a0b6cda3ff78a02df52680a7939fc7f35e3559eb/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersefdb03ad2e80a11e17f8a894a0b6cda3ff78a02df52680a7939fc7f35e3559ebArtifactHashB3A88ACC",
+            "trace": [
+              "new FileAssetParameters (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:86:19)",
+              "CdkStarterStack.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack.ts:683:29)",
+              "/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:53",
+              "withoutDeprecationWarnings (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:219:12)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:14)",
+              "NestedStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/nested.ts:33:34)",
+              "new Asset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
+              "AssetCode.bind (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/code.ts:285:20)",
+              "new Function (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:708:29)",
+              "new NodejsFunction (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:103:5)",
+              "new HealthStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/substacks/health/index.ts:16:17)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:35:5)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/AssetParameters/aab98f915d86f3900714ce52d7069ae83fc185f147b988382f3b951bdaf6e0f8/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersaab98f915d86f3900714ce52d7069ae83fc185f147b988382f3b951bdaf6e0f8S3Bucket348D70AB",
+            "trace": [
+              "new FileAssetParameters (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:86:19)",
+              "CdkStarterStack.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack.ts:683:29)",
+              "/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:53",
+              "withoutDeprecationWarnings (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:219:12)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:14)",
+              "HealthStack._prepareTemplateAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/nested-stack.ts:222:60)",
+              "defineNestedStackAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/prepare-app.ts:69:10)",
+              "Object.prepareApp (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/prepare-app.ts:43:7)",
+              "Object.synthesize (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:24:3)",
+              "App.synth (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stage.ts:180:23)",
+              "process.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/app.ts:131:45)",
+              "Object.onceWrapper (events.js:520:26)",
+              "process.emit (events.js:400:28)",
+              "process.emit (domain.js:470:12)",
+              "process.emit (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/cdk-stack/AssetParameters/aab98f915d86f3900714ce52d7069ae83fc185f147b988382f3b951bdaf6e0f8/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersaab98f915d86f3900714ce52d7069ae83fc185f147b988382f3b951bdaf6e0f8S3VersionKey3670A10D",
+            "trace": [
+              "new FileAssetParameters (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:86:19)",
+              "CdkStarterStack.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack.ts:683:29)",
+              "/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:53",
+              "withoutDeprecationWarnings (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:219:12)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:14)",
+              "HealthStack._prepareTemplateAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/nested-stack.ts:222:60)",
+              "defineNestedStackAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/prepare-app.ts:69:10)",
+              "Object.prepareApp (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/prepare-app.ts:43:7)",
+              "Object.synthesize (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:24:3)",
+              "App.synth (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stage.ts:180:23)",
+              "process.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/app.ts:131:45)",
+              "Object.onceWrapper (events.js:520:26)",
+              "process.emit (events.js:400:28)",
+              "process.emit (domain.js:470:12)",
+              "process.emit (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/cdk-stack/AssetParameters/aab98f915d86f3900714ce52d7069ae83fc185f147b988382f3b951bdaf6e0f8/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersaab98f915d86f3900714ce52d7069ae83fc185f147b988382f3b951bdaf6e0f8ArtifactHash2140FFD2",
+            "trace": [
+              "new FileAssetParameters (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:86:19)",
+              "CdkStarterStack.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack.ts:683:29)",
+              "/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:53",
+              "withoutDeprecationWarnings (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:219:12)",
+              "LegacyStackSynthesizer.addFileAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:91:14)",
+              "HealthStack._prepareTemplateAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/nested-stack.ts:222:60)",
+              "defineNestedStackAsset (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/prepare-app.ts:69:10)",
+              "Object.prepareApp (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/prepare-app.ts:43:7)",
+              "Object.synthesize (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:24:3)",
+              "App.synth (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stage.ts:180:23)",
+              "process.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/app.ts:131:45)",
+              "Object.onceWrapper (events.js:520:26)",
+              "process.emit (events.js:400:28)",
+              "process.emit (domain.js:470:12)",
+              "process.emit (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/cdk-stack/health/hello2/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hello2ServiceRoleFE83FBF8",
+            "trace": [
+              "new Role (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-iam/lib/role.ts:381:18)",
+              "new Function (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:688:31)",
+              "new NodejsFunction (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:103:5)",
+              "new HealthStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/substacks/health/index.ts:16:17)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:35:5)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/health/hello2/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hello29182CD22",
+            "trace": [
+              "new Function (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:771:35)",
+              "new NodejsFunction (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:103:5)",
+              "new HealthStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/substacks/health/index.ts:16:17)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:35:5)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/health/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "visit (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stage.ts:180:23)",
+              "process.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/app.ts:131:45)",
+              "Object.onceWrapper (events.js:520:26)",
+              "process.emit (events.js:400:28)",
+              "process.emit (domain.js:470:12)",
+              "process.emit (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/cdk-stack/health/cdkstackhealthhello233C44984Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cdkstackhealthhello233C44984Arn",
+            "trace": [
+              "createNestedStackOutput (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/refs.ts:206:14)",
+              "resolveValue (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/refs.ts:86:25)",
+              "Object.resolveReferences (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/refs.ts:30:24)",
+              "Object.prepareApp (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/prepare-app.ts:31:3)",
+              "Object.synthesize (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:24:3)",
+              "App.synth (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stage.ts:180:23)",
+              "process.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/app.ts:131:45)",
+              "Object.onceWrapper (events.js:520:26)",
+              "process.emit (events.js:400:28)",
+              "process.emit (domain.js:470:12)",
+              "process.emit (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/cdk-stack/health/reference-to-cdkstackAssetParametersefdb03ad2e80a11e17f8a894a0b6cda3ff78a02df52680a7939fc7f35e3559ebS3BucketA99BEB5ARef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetocdkstackAssetParametersefdb03ad2e80a11e17f8a894a0b6cda3ff78a02df52680a7939fc7f35e3559ebS3BucketA99BEB5ARef",
+            "trace": [
+              "createNestedStackParameter (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/refs.ts:185:13)",
+              "resolveValue (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/refs.ts:68:12)",
+              "Object.resolveReferences (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/refs.ts:30:24)",
+              "Object.prepareApp (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/prepare-app.ts:31:3)",
+              "Object.synthesize (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:24:3)",
+              "App.synth (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stage.ts:180:23)",
+              "process.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/app.ts:131:45)",
+              "Object.onceWrapper (events.js:520:26)",
+              "process.emit (events.js:400:28)",
+              "process.emit (domain.js:470:12)",
+              "process.emit (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/cdk-stack/health/reference-to-cdkstackAssetParametersefdb03ad2e80a11e17f8a894a0b6cda3ff78a02df52680a7939fc7f35e3559ebS3VersionKey2CC44ECFRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetocdkstackAssetParametersefdb03ad2e80a11e17f8a894a0b6cda3ff78a02df52680a7939fc7f35e3559ebS3VersionKey2CC44ECFRef",
+            "trace": [
+              "createNestedStackParameter (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/refs.ts:185:13)",
+              "resolveValue (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/refs.ts:68:12)",
+              "Object.resolveReferences (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/refs.ts:30:24)",
+              "Object.prepareApp (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/prepare-app.ts:31:3)",
+              "Object.synthesize (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:24:3)",
+              "App.synth (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stage.ts:180:23)",
+              "process.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/app.ts:131:45)",
+              "Object.onceWrapper (events.js:520:26)",
+              "process.emit (events.js:400:28)",
+              "process.emit (domain.js:470:12)",
+              "process.emit (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/cdk-stack/health.NestedStack/health.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "healthNestedStackhealthNestedStackResourceE3347E41",
+            "trace": [
+              "new NestedStack (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/nested-stack.ts:133:21)",
+              "new HealthStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/substacks/health/index.ts:14:5)",
+              "new CdkStarterStack (/home/vatsal/Desktop/cdk-typescript-lambda/lib/cdk-starter-stack.ts:35:5)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/bin/cdk-starter.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Module.m._compile (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1072:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)",
+              "Module.load (internal/modules/cjs/loader.js:937:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:778:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/stage.ts:180:23)",
+              "process.<anonymous> (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/@aws-cdk/core/lib/app.ts:131:45)",
+              "Object.onceWrapper (events.js:520:26)",
+              "process.emit (events.js:400:28)",
+              "process.emit (domain.js:470:12)",
+              "process.emit (/home/vatsal/Desktop/cdk-typescript-lambda/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "cdk-stack"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+var o=Object.defineProperty;var s=a=>o(a,"__esModule",{value:!0});var n=(a,e)=>{for(var t in e)o(a,t,{get:e[t],enumerable:!0})};s(exports);n(exports,{main:()=>r});async function r(a){return console.log("event \u{1F449}",a),{body:JSON.stringify({message:"Successful lambda invocation"}),statusCode:200}}0&&(module.exports={main});

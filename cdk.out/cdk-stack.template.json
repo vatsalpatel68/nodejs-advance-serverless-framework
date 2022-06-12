@@ -1,0 +1,1018 @@
+{
+ "Resources": {
+  "CDKDE331439": {
+   "Type": "AWS::ApiGateway::RestApi",
+   "Properties": {
+    "Description": "Health API",
+    "EndpointConfiguration": {
+     "Types": [
+      "EDGE"
+     ]
+    },
+    "Name": "CDK"
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDK/Resource"
+   }
+  },
+  "CDKCloudWatchRole73B0CD1F": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "apigateway.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+       ]
+      ]
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDK/CloudWatchRole/Resource"
+   }
+  },
+  "CDKAccount2F865C0D": {
+   "Type": "AWS::ApiGateway::Account",
+   "Properties": {
+    "CloudWatchRoleArn": {
+     "Fn::GetAtt": [
+      "CDKCloudWatchRole73B0CD1F",
+      "Arn"
+     ]
+    }
+   },
+   "DependsOn": [
+    "CDKDE331439"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDK/Account"
+   }
+  },
+  "CDKDeployment4B9C85317b4ac02ca98ee7f9ca9a31bcffd98a4e": {
+   "Type": "AWS::ApiGateway::Deployment",
+   "Properties": {
+    "RestApiId": {
+     "Ref": "CDKDE331439"
+    },
+    "Description": "Automatically created by the RestApi construct"
+   },
+   "DependsOn": [
+    "CDKauthloginPOST8DE2E5D6",
+    "CDKauthloginE84AD8F3",
+    "CDKauth225E94E5",
+    "CDKauthsignupPOSTC7D884DC",
+    "CDKauthsignup52AF6079",
+    "CDKGET46C46C59",
+    "CDKusersGETB15BC4E8",
+    "CDKusersCBF1E6D7"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDK/Deployment/Resource"
+   }
+  },
+  "CDKDeploymentStageprod2FC93819": {
+   "Type": "AWS::ApiGateway::Stage",
+   "Properties": {
+    "RestApiId": {
+     "Ref": "CDKDE331439"
+    },
+    "DeploymentId": {
+     "Ref": "CDKDeployment4B9C85317b4ac02ca98ee7f9ca9a31bcffd98a4e"
+    },
+    "StageName": "prod"
+   },
+   "DependsOn": [
+    "CDKAccount2F865C0D"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDK/DeploymentStage.prod/Resource"
+   }
+  },
+  "CDKGETApiPermissioncdkstackCDKE9F930B7GETFBF8D451": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "hello26396490",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:ap-south-1:528026266520:",
+       {
+        "Ref": "CDKDE331439"
+       },
+       "/",
+       {
+        "Ref": "CDKDeploymentStageprod2FC93819"
+       },
+       "/GET/"
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDK/Default/GET/ApiPermission.cdkstackCDKE9F930B7.GET.."
+   }
+  },
+  "CDKGETApiPermissionTestcdkstackCDKE9F930B7GET8C76BBD6": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "hello26396490",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:ap-south-1:528026266520:",
+       {
+        "Ref": "CDKDE331439"
+       },
+       "/test-invoke-stage/GET/"
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDK/Default/GET/ApiPermission.Test.cdkstackCDKE9F930B7.GET.."
+   }
+  },
+  "CDKGET46C46C59": {
+   "Type": "AWS::ApiGateway::Method",
+   "Properties": {
+    "HttpMethod": "GET",
+    "ResourceId": {
+     "Fn::GetAtt": [
+      "CDKDE331439",
+      "RootResourceId"
+     ]
+    },
+    "RestApiId": {
+     "Ref": "CDKDE331439"
+    },
+    "AuthorizationType": "NONE",
+    "Integration": {
+     "IntegrationHttpMethod": "POST",
+     "Type": "AWS_PROXY",
+     "Uri": {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":apigateway:ap-south-1:lambda:path/2015-03-31/functions/",
+        {
+         "Fn::GetAtt": [
+          "hello26396490",
+          "Arn"
+         ]
+        },
+        "/invocations"
+       ]
+      ]
+     }
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDK/Default/GET/Resource"
+   }
+  },
+  "CDKauth225E94E5": {
+   "Type": "AWS::ApiGateway::Resource",
+   "Properties": {
+    "ParentId": {
+     "Fn::GetAtt": [
+      "CDKDE331439",
+      "RootResourceId"
+     ]
+    },
+    "PathPart": "auth",
+    "RestApiId": {
+     "Ref": "CDKDE331439"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDK/Default/auth/Resource"
+   }
+  },
+  "CDKauthsignup52AF6079": {
+   "Type": "AWS::ApiGateway::Resource",
+   "Properties": {
+    "ParentId": {
+     "Ref": "CDKauth225E94E5"
+    },
+    "PathPart": "signup",
+    "RestApiId": {
+     "Ref": "CDKDE331439"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDK/Default/auth/signup/Resource"
+   }
+  },
+  "CDKauthsignupPOSTApiPermissioncdkstackCDKE9F930B7POSTauthsignupE29CBD96": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "healthNestedStackhealthNestedStackResourceE3347E41",
+      "Outputs.cdkstackhealthSignup48EA3D8EArn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:ap-south-1:528026266520:",
+       {
+        "Ref": "CDKDE331439"
+       },
+       "/",
+       {
+        "Ref": "CDKDeploymentStageprod2FC93819"
+       },
+       "/POST/auth/signup"
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDK/Default/auth/signup/POST/ApiPermission.cdkstackCDKE9F930B7.POST..auth.signup"
+   }
+  },
+  "CDKauthsignupPOSTApiPermissionTestcdkstackCDKE9F930B7POSTauthsignup43B38FBA": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "healthNestedStackhealthNestedStackResourceE3347E41",
+      "Outputs.cdkstackhealthSignup48EA3D8EArn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:ap-south-1:528026266520:",
+       {
+        "Ref": "CDKDE331439"
+       },
+       "/test-invoke-stage/POST/auth/signup"
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDK/Default/auth/signup/POST/ApiPermission.Test.cdkstackCDKE9F930B7.POST..auth.signup"
+   }
+  },
+  "CDKauthsignupPOSTC7D884DC": {
+   "Type": "AWS::ApiGateway::Method",
+   "Properties": {
+    "HttpMethod": "POST",
+    "ResourceId": {
+     "Ref": "CDKauthsignup52AF6079"
+    },
+    "RestApiId": {
+     "Ref": "CDKDE331439"
+    },
+    "AuthorizationType": "NONE",
+    "Integration": {
+     "IntegrationHttpMethod": "POST",
+     "Type": "AWS_PROXY",
+     "Uri": {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":apigateway:ap-south-1:lambda:path/2015-03-31/functions/",
+        {
+         "Fn::GetAtt": [
+          "healthNestedStackhealthNestedStackResourceE3347E41",
+          "Outputs.cdkstackhealthSignup48EA3D8EArn"
+         ]
+        },
+        "/invocations"
+       ]
+      ]
+     }
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDK/Default/auth/signup/POST/Resource"
+   }
+  },
+  "CDKauthloginE84AD8F3": {
+   "Type": "AWS::ApiGateway::Resource",
+   "Properties": {
+    "ParentId": {
+     "Ref": "CDKauth225E94E5"
+    },
+    "PathPart": "login",
+    "RestApiId": {
+     "Ref": "CDKDE331439"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDK/Default/auth/login/Resource"
+   }
+  },
+  "CDKauthloginPOSTApiPermissioncdkstackCDKE9F930B7POSTauthlogin03C43DC9": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "healthNestedStackhealthNestedStackResourceE3347E41",
+      "Outputs.cdkstackhealthlogin89D3030EArn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:ap-south-1:528026266520:",
+       {
+        "Ref": "CDKDE331439"
+       },
+       "/",
+       {
+        "Ref": "CDKDeploymentStageprod2FC93819"
+       },
+       "/POST/auth/login"
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDK/Default/auth/login/POST/ApiPermission.cdkstackCDKE9F930B7.POST..auth.login"
+   }
+  },
+  "CDKauthloginPOSTApiPermissionTestcdkstackCDKE9F930B7POSTauthloginDDDF93D0": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "healthNestedStackhealthNestedStackResourceE3347E41",
+      "Outputs.cdkstackhealthlogin89D3030EArn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:ap-south-1:528026266520:",
+       {
+        "Ref": "CDKDE331439"
+       },
+       "/test-invoke-stage/POST/auth/login"
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDK/Default/auth/login/POST/ApiPermission.Test.cdkstackCDKE9F930B7.POST..auth.login"
+   }
+  },
+  "CDKauthloginPOST8DE2E5D6": {
+   "Type": "AWS::ApiGateway::Method",
+   "Properties": {
+    "HttpMethod": "POST",
+    "ResourceId": {
+     "Ref": "CDKauthloginE84AD8F3"
+    },
+    "RestApiId": {
+     "Ref": "CDKDE331439"
+    },
+    "AuthorizationType": "NONE",
+    "Integration": {
+     "IntegrationHttpMethod": "POST",
+     "Type": "AWS_PROXY",
+     "Uri": {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":apigateway:ap-south-1:lambda:path/2015-03-31/functions/",
+        {
+         "Fn::GetAtt": [
+          "healthNestedStackhealthNestedStackResourceE3347E41",
+          "Outputs.cdkstackhealthlogin89D3030EArn"
+         ]
+        },
+        "/invocations"
+       ]
+      ]
+     }
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDK/Default/auth/login/POST/Resource"
+   }
+  },
+  "CDKusersCBF1E6D7": {
+   "Type": "AWS::ApiGateway::Resource",
+   "Properties": {
+    "ParentId": {
+     "Fn::GetAtt": [
+      "CDKDE331439",
+      "RootResourceId"
+     ]
+    },
+    "PathPart": "users",
+    "RestApiId": {
+     "Ref": "CDKDE331439"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDK/Default/users/Resource"
+   }
+  },
+  "CDKusersGETApiPermissioncdkstackCDKE9F930B7GETusersFF77D041": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "hello26396490",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:ap-south-1:528026266520:",
+       {
+        "Ref": "CDKDE331439"
+       },
+       "/",
+       {
+        "Ref": "CDKDeploymentStageprod2FC93819"
+       },
+       "/GET/users"
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDK/Default/users/GET/ApiPermission.cdkstackCDKE9F930B7.GET..users"
+   }
+  },
+  "CDKusersGETApiPermissionTestcdkstackCDKE9F930B7GETusersC889FBB7": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "hello26396490",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:ap-south-1:528026266520:",
+       {
+        "Ref": "CDKDE331439"
+       },
+       "/test-invoke-stage/GET/users"
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDK/Default/users/GET/ApiPermission.Test.cdkstackCDKE9F930B7.GET..users"
+   }
+  },
+  "CDKusersGETB15BC4E8": {
+   "Type": "AWS::ApiGateway::Method",
+   "Properties": {
+    "HttpMethod": "GET",
+    "ResourceId": {
+     "Ref": "CDKusersCBF1E6D7"
+    },
+    "RestApiId": {
+     "Ref": "CDKDE331439"
+    },
+    "AuthorizationType": "COGNITO_USER_POOLS",
+    "AuthorizerId": {
+     "Ref": "CDKAuthorizer9FAB2896"
+    },
+    "Integration": {
+     "IntegrationHttpMethod": "POST",
+     "Type": "AWS_PROXY",
+     "Uri": {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":apigateway:ap-south-1:lambda:path/2015-03-31/functions/",
+        {
+         "Fn::GetAtt": [
+          "hello26396490",
+          "Arn"
+         ]
+        },
+        "/invocations"
+       ]
+      ]
+     }
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDK/Default/users/GET/Resource"
+   }
+  },
+  "helloServiceRole353607D3": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/hello/ServiceRole/Resource"
+   }
+  },
+  "hello26396490": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": {
+      "Ref": "AssetParametersda481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbddS3Bucket29754E0B"
+     },
+     "S3Key": {
+      "Fn::Join": [
+       "",
+       [
+        {
+         "Fn::Select": [
+          0,
+          {
+           "Fn::Split": [
+            "||",
+            {
+             "Ref": "AssetParametersda481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbddS3VersionKeyE92B6C66"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "Fn::Select": [
+          1,
+          {
+           "Fn::Split": [
+            "||",
+            {
+             "Ref": "AssetParametersda481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbddS3VersionKeyE92B6C66"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      ]
+     }
+    },
+    "Role": {
+     "Fn::GetAtt": [
+      "helloServiceRole353607D3",
+      "Arn"
+     ]
+    },
+    "Environment": {
+     "Variables": {
+      "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1"
+     }
+    },
+    "FunctionName": "hello",
+    "Handler": "index.main",
+    "MemorySize": 128,
+    "Runtime": "nodejs14.x",
+    "Timeout": 5
+   },
+   "DependsOn": [
+    "helloServiceRole353607D3"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/hello/Resource",
+    "aws:asset:path": "asset.da481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbdd",
+    "aws:asset:is-bundled": true,
+    "aws:asset:property": "Code"
+   }
+  },
+  "healthNestedStackhealthNestedStackResourceE3347E41": {
+   "Type": "AWS::CloudFormation::Stack",
+   "Properties": {
+    "TemplateURL": {
+     "Fn::Join": [
+      "",
+      [
+       "https://s3.ap-south-1.",
+       {
+        "Ref": "AWS::URLSuffix"
+       },
+       "/",
+       {
+        "Ref": "AssetParameters241d21a0fd4b55155f435f2ee3bfd11ef1b75da98e7b1e6bf41e972168c211b7S3BucketCA583385"
+       },
+       "/",
+       {
+        "Fn::Select": [
+         0,
+         {
+          "Fn::Split": [
+           "||",
+           {
+            "Ref": "AssetParameters241d21a0fd4b55155f435f2ee3bfd11ef1b75da98e7b1e6bf41e972168c211b7S3VersionKey24D05B97"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "||",
+           {
+            "Ref": "AssetParameters241d21a0fd4b55155f435f2ee3bfd11ef1b75da98e7b1e6bf41e972168c211b7S3VersionKey24D05B97"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     ]
+    },
+    "Parameters": {
+     "referencetocdkstackAssetParameterscd48956f9aac55834028fb8a8d92e8c383ef84b17a9acd4566d72b66aa0d4e8aS3Bucket6F011AABRef": {
+      "Ref": "AssetParameterscd48956f9aac55834028fb8a8d92e8c383ef84b17a9acd4566d72b66aa0d4e8aS3Bucket25C40F55"
+     },
+     "referencetocdkstackAssetParameterscd48956f9aac55834028fb8a8d92e8c383ef84b17a9acd4566d72b66aa0d4e8aS3VersionKeyAB63457CRef": {
+      "Ref": "AssetParameterscd48956f9aac55834028fb8a8d92e8c383ef84b17a9acd4566d72b66aa0d4e8aS3VersionKeyB15C93E1"
+     },
+     "referencetocdkstackAssetParameters2173960b43fea6669c0f429a1bfa0b158ceebf6daf1c46a9d3c0ed5c5ce4214dS3Bucket4DEDF449Ref": {
+      "Ref": "AssetParameters2173960b43fea6669c0f429a1bfa0b158ceebf6daf1c46a9d3c0ed5c5ce4214dS3Bucket285BE6E8"
+     },
+     "referencetocdkstackAssetParameters2173960b43fea6669c0f429a1bfa0b158ceebf6daf1c46a9d3c0ed5c5ce4214dS3VersionKey601D4E08Ref": {
+      "Ref": "AssetParameters2173960b43fea6669c0f429a1bfa0b158ceebf6daf1c46a9d3c0ed5c5ce4214dS3VersionKey760727C4"
+     },
+     "referencetocdkstackAssetParameters0d316b64f69da7562a4bab9b5bd91cfa53747a57ec0f31e6e6854624c8364130S3Bucket92C5DD47Ref": {
+      "Ref": "AssetParameters0d316b64f69da7562a4bab9b5bd91cfa53747a57ec0f31e6e6854624c8364130S3BucketCC0ED78F"
+     },
+     "referencetocdkstackAssetParameters0d316b64f69da7562a4bab9b5bd91cfa53747a57ec0f31e6e6854624c8364130S3VersionKeyDD5CA2D2Ref": {
+      "Ref": "AssetParameters0d316b64f69da7562a4bab9b5bd91cfa53747a57ec0f31e6e6854624c8364130S3VersionKey08E6E353"
+     }
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/health.NestedStack/health.NestedStackResource",
+    "aws:asset:path": "cdkstackhealth7D5900AE.nested.template.json",
+    "aws:asset:property": "TemplateURL"
+   }
+  },
+  "CDKAuthorizer9FAB2896": {
+   "Type": "AWS::ApiGateway::Authorizer",
+   "Properties": {
+    "Name": "CDK",
+    "RestApiId": {
+     "Ref": "CDKDE331439"
+    },
+    "Type": "COGNITO_USER_POOLS",
+    "AuthorizerResultTtlInSeconds": 3600,
+    "IdentitySource": "method.request.header.Authorization",
+    "ProviderARNs": [
+     {
+      "Fn::GetAtt": [
+       "healthNestedStackhealthNestedStackResourceE3347E41",
+       "Outputs.cdkstackhealthCDKC1CD858DArn"
+      ]
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDKAuthorizer/Resource"
+   }
+  },
+  "ProtectedServiceRoleA5A31286": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/Protected/ServiceRole/Resource"
+   }
+  },
+  "Protected64A7BD96": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": {
+      "Ref": "AssetParameters7ad6cd7b69d4d56b177fe3400ea0e4c136783f2ed54ceec2909f3d482155f89bS3Bucket0BB87ED5"
+     },
+     "S3Key": {
+      "Fn::Join": [
+       "",
+       [
+        {
+         "Fn::Select": [
+          0,
+          {
+           "Fn::Split": [
+            "||",
+            {
+             "Ref": "AssetParameters7ad6cd7b69d4d56b177fe3400ea0e4c136783f2ed54ceec2909f3d482155f89bS3VersionKey78B74DCD"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "Fn::Select": [
+          1,
+          {
+           "Fn::Split": [
+            "||",
+            {
+             "Ref": "AssetParameters7ad6cd7b69d4d56b177fe3400ea0e4c136783f2ed54ceec2909f3d482155f89bS3VersionKey78B74DCD"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      ]
+     }
+    },
+    "Role": {
+     "Fn::GetAtt": [
+      "ProtectedServiceRoleA5A31286",
+      "Arn"
+     ]
+    },
+    "Environment": {
+     "Variables": {
+      "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1"
+     }
+    },
+    "FunctionName": "Protected",
+    "Handler": "index.main",
+    "MemorySize": 128,
+    "Runtime": "nodejs14.x",
+    "Timeout": 5
+   },
+   "DependsOn": [
+    "ProtectedServiceRoleA5A31286"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/Protected/Resource",
+    "aws:asset:path": "asset.7ad6cd7b69d4d56b177fe3400ea0e4c136783f2ed54ceec2909f3d482155f89b",
+    "aws:asset:is-bundled": true,
+    "aws:asset:property": "Code"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/01Qy1LDMAz8lt4dlQyv4UZahhvQKcMHGEcNzsPKWDKdksm/YycN9KRd70paK4f89gGuVo/6yJkpm/VgyCMM76JNo7YH9xakD6IKZpT4WFlXqS05Fh+MJMNOe92hoE/kr22PTMEbHFUaPOjeVlrwqE8wREmK3p5dCyyMoeBEPWHf0qlDNw2/YGk5nndEsCzYaEb1gvJFZRLPaFEvo8TYlbNCH4x+R9RyEaLX2585+j8bldVdzEnt3B/rqFrdfZYahvRj9J1ltuSS/ByckYgXS+aoxJrhdSqLqvg60+mGDNMpI4dNMA1K+sA4qtQFNa+/8xvI7+FuVbO1mY8nsR3Cfq6/imti2a4BAAA="
+   },
+   "Metadata": {
+    "aws:cdk:path": "cdk-stack/CDKMetadata/Default"
+   }
+  }
+ },
+ "Outputs": {
+  "CDKEndpoint25D2AB48": {
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "https://",
+      {
+       "Ref": "CDKDE331439"
+      },
+      ".execute-api.ap-south-1.",
+      {
+       "Ref": "AWS::URLSuffix"
+      },
+      "/",
+      {
+       "Ref": "CDKDeploymentStageprod2FC93819"
+      },
+      "/"
+     ]
+    ]
+   }
+  }
+ },
+ "Parameters": {
+  "AssetParametersda481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbddS3Bucket29754E0B": {
+   "Type": "String",
+   "Description": "S3 bucket for asset \"da481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbdd\""
+  },
+  "AssetParametersda481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbddS3VersionKeyE92B6C66": {
+   "Type": "String",
+   "Description": "S3 key for asset version \"da481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbdd\""
+  },
+  "AssetParametersda481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbddArtifactHashD0089649": {
+   "Type": "String",
+   "Description": "Artifact hash for asset \"da481aa73b9b513df7a4c2cfab91875e73e2f605fa443f1cbfed15ad8119dbdd\""
+  },
+  "AssetParameterscd48956f9aac55834028fb8a8d92e8c383ef84b17a9acd4566d72b66aa0d4e8aS3Bucket25C40F55": {
+   "Type": "String",
+   "Description": "S3 bucket for asset \"cd48956f9aac55834028fb8a8d92e8c383ef84b17a9acd4566d72b66aa0d4e8a\""
+  },
+  "AssetParameterscd48956f9aac55834028fb8a8d92e8c383ef84b17a9acd4566d72b66aa0d4e8aS3VersionKeyB15C93E1": {
+   "Type": "String",
+   "Description": "S3 key for asset version \"cd48956f9aac55834028fb8a8d92e8c383ef84b17a9acd4566d72b66aa0d4e8a\""
+  },
+  "AssetParameterscd48956f9aac55834028fb8a8d92e8c383ef84b17a9acd4566d72b66aa0d4e8aArtifactHash9EA4B7C3": {
+   "Type": "String",
+   "Description": "Artifact hash for asset \"cd48956f9aac55834028fb8a8d92e8c383ef84b17a9acd4566d72b66aa0d4e8a\""
+  },
+  "AssetParameters2173960b43fea6669c0f429a1bfa0b158ceebf6daf1c46a9d3c0ed5c5ce4214dS3Bucket285BE6E8": {
+   "Type": "String",
+   "Description": "S3 bucket for asset \"2173960b43fea6669c0f429a1bfa0b158ceebf6daf1c46a9d3c0ed5c5ce4214d\""
+  },
+  "AssetParameters2173960b43fea6669c0f429a1bfa0b158ceebf6daf1c46a9d3c0ed5c5ce4214dS3VersionKey760727C4": {
+   "Type": "String",
+   "Description": "S3 key for asset version \"2173960b43fea6669c0f429a1bfa0b158ceebf6daf1c46a9d3c0ed5c5ce4214d\""
+  },
+  "AssetParameters2173960b43fea6669c0f429a1bfa0b158ceebf6daf1c46a9d3c0ed5c5ce4214dArtifactHashC07F0236": {
+   "Type": "String",
+   "Description": "Artifact hash for asset \"2173960b43fea6669c0f429a1bfa0b158ceebf6daf1c46a9d3c0ed5c5ce4214d\""
+  },
+  "AssetParameters0d316b64f69da7562a4bab9b5bd91cfa53747a57ec0f31e6e6854624c8364130S3BucketCC0ED78F": {
+   "Type": "String",
+   "Description": "S3 bucket for asset \"0d316b64f69da7562a4bab9b5bd91cfa53747a57ec0f31e6e6854624c8364130\""
+  },
+  "AssetParameters0d316b64f69da7562a4bab9b5bd91cfa53747a57ec0f31e6e6854624c8364130S3VersionKey08E6E353": {
+   "Type": "String",
+   "Description": "S3 key for asset version \"0d316b64f69da7562a4bab9b5bd91cfa53747a57ec0f31e6e6854624c8364130\""
+  },
+  "AssetParameters0d316b64f69da7562a4bab9b5bd91cfa53747a57ec0f31e6e6854624c8364130ArtifactHash7E4F3530": {
+   "Type": "String",
+   "Description": "Artifact hash for asset \"0d316b64f69da7562a4bab9b5bd91cfa53747a57ec0f31e6e6854624c8364130\""
+  },
+  "AssetParameters7ad6cd7b69d4d56b177fe3400ea0e4c136783f2ed54ceec2909f3d482155f89bS3Bucket0BB87ED5": {
+   "Type": "String",
+   "Description": "S3 bucket for asset \"7ad6cd7b69d4d56b177fe3400ea0e4c136783f2ed54ceec2909f3d482155f89b\""
+  },
+  "AssetParameters7ad6cd7b69d4d56b177fe3400ea0e4c136783f2ed54ceec2909f3d482155f89bS3VersionKey78B74DCD": {
+   "Type": "String",
+   "Description": "S3 key for asset version \"7ad6cd7b69d4d56b177fe3400ea0e4c136783f2ed54ceec2909f3d482155f89b\""
+  },
+  "AssetParameters7ad6cd7b69d4d56b177fe3400ea0e4c136783f2ed54ceec2909f3d482155f89bArtifactHashEA4AF053": {
+   "Type": "String",
+   "Description": "Artifact hash for asset \"7ad6cd7b69d4d56b177fe3400ea0e4c136783f2ed54ceec2909f3d482155f89b\""
+  },
+  "AssetParameters241d21a0fd4b55155f435f2ee3bfd11ef1b75da98e7b1e6bf41e972168c211b7S3BucketCA583385": {
+   "Type": "String",
+   "Description": "S3 bucket for asset \"241d21a0fd4b55155f435f2ee3bfd11ef1b75da98e7b1e6bf41e972168c211b7\""
+  },
+  "AssetParameters241d21a0fd4b55155f435f2ee3bfd11ef1b75da98e7b1e6bf41e972168c211b7S3VersionKey24D05B97": {
+   "Type": "String",
+   "Description": "S3 key for asset version \"241d21a0fd4b55155f435f2ee3bfd11ef1b75da98e7b1e6bf41e972168c211b7\""
+  },
+  "AssetParameters241d21a0fd4b55155f435f2ee3bfd11ef1b75da98e7b1e6bf41e972168c211b7ArtifactHashF73D22C4": {
+   "Type": "String",
+   "Description": "Artifact hash for asset \"241d21a0fd4b55155f435f2ee3bfd11ef1b75da98e7b1e6bf41e972168c211b7\""
+  }
+ }
+}

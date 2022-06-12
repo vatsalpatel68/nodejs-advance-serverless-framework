@@ -1,0 +1,1 @@
+var o=Object.defineProperty;var r=e=>o(e,"__esModule",{value:!0});var y=(e,t)=>{for(var a in t)o(e,a,{get:t[a],enumerable:!0})};r(exports);y(exports,{main:()=>s});async function s(e){return{body:JSON.stringify({message:"Hello world 2"}),statusCode:200}}0&&(module.exports={main});
